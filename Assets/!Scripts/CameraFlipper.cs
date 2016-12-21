@@ -44,7 +44,9 @@ public class CameraFlipper : MonoBehaviour {
         Thread.Sleep(100);
         audio.Play();      //play music
         player.bStart = true;
+        Thread.Sleep(1000);
         player.anim.SetBool("bStarted", true);
+        player.anim.SetBool("bDied", false);
         PlatformPlacer.bReset = false;
         player.paused = false;
     }
@@ -189,7 +191,7 @@ public class CameraFlipper : MonoBehaviour {
     void SetPortrait()
     {
         transform.position = new Vector3(playerGO.transform.position.x -2F, 6F, 0F);
-        transform.eulerAngles = new Vector3(22F, 90F, 0F);
+        transform.eulerAngles = new Vector3(30F, 90F, 0F);
         xOffset = -4F;
     }
     
