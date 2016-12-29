@@ -35,6 +35,11 @@ public class Player : MonoBehaviour {
     private Vector3 initPos;
 
 
+    public void ResetButton()
+    {
+        Reset();
+    }
+
     public void Chrouch()
     {
         if(chrouch == false)
@@ -47,7 +52,6 @@ public class Player : MonoBehaviour {
 
 public void Reset()
     {
-        chrouch = false;
         rb.angularVelocity = Vector3.zero;
         rb.velocity = Vector3.zero;
         transform.rotation = initRotation;
@@ -55,8 +59,6 @@ public void Reset()
         anim.SetBool("bJumping", false);
         anim.SetBool("bStarted", false);
         anim.SetBool("bDied", false);
-        anim.SetBool("chrouch", false);
-        
         lastX = -1F;
         bFalling = false;
         bInJump = false;
@@ -68,6 +70,7 @@ public void Reset()
         LastXPosition = 0;
         transform.position = initPos;
         bSkip = Time.time + 0.25f;
+        
     }
 
 

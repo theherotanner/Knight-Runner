@@ -35,10 +35,7 @@ public class CameraFlipper : MonoBehaviour {
     private bool haveWrittenHighestScore = false;
     private bool didJump = false;
 
-    public void Reset()
-    {
-        Restart();
-    }
+
     public void LeaveMenu()
     {
         Thread.Sleep(100);
@@ -108,7 +105,7 @@ public class CameraFlipper : MonoBehaviour {
             hsText.text = "High-Score:" + player.highscore.ToString();
 
 
-            if (player.bLostMomentum && player.paused == false)       //lost momentum so time to die
+            if (player.bLostMomentum)       //lost momentum so time to die
             {
                 player.bGameOver = true;        //set game over state
                 player.thrust = player.originalTrust;
@@ -190,9 +187,9 @@ public class CameraFlipper : MonoBehaviour {
     //set camera to portrait mode (taller than wide)
     void SetPortrait()
     {
-        transform.position = new Vector3(playerGO.transform.position.x -2F, 6F, 0F);
-        transform.eulerAngles = new Vector3(30F, 90F, 0F);
-        xOffset = -4F;
+        transform.position = new Vector3(playerGO.transform.position.x, 5.2F, -15F);
+        transform.eulerAngles = new Vector3(10F, 0F, 0F);
+        xOffset = 2F;
     }
     
     //Retrun everything to start up state
