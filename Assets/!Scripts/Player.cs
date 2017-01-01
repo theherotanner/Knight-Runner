@@ -27,7 +27,6 @@ public class Player : MonoBehaviour {
     public Quaternion initRotation;
     public bool paused = false;
     public bool chrouch = false;
-    
 
     //private variables are not accessible from other scripts and in the editor
     private float bSkip = 0f;
@@ -37,7 +36,7 @@ public class Player : MonoBehaviour {
 
     public void ResetButton()
     {
-        Reset();
+        bLostMomentum = true;
     }
 
     public void Chrouch()
