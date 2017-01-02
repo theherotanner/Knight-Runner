@@ -181,7 +181,7 @@ public class CameraFlipper : MonoBehaviour {
     {
         transform.position = new Vector3(playerGO.transform.position.x, 5F, -10F);
         transform.eulerAngles = new Vector3(10F, 0F, 0F);
-        xOffset = 2F;
+        xOffset = 3F;
     }
 
     //set camera to portrait mode (taller than wide)
